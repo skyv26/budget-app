@@ -4,7 +4,7 @@ RSpec.describe Category, type: :model do
   describe 'Model Test' do
     before :each do
       @user = User.new(name: 'rspec-user')
-      @repair = Category.create!(name: 'Repair', icon: 'https://img.icons8.com/ios-filled/512/maintenance.png', author: @user)
+      @repair = Category.new(name: 'Repair', icon: 'https://img.icons8.com/ios-filled/512/maintenance.png', author: @user)
     end
 
     it 'should check name data is not valid' do

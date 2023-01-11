@@ -4,7 +4,7 @@ RSpec.describe Expense, type: :model do
   describe 'Model Test' do
     before :each do
       @user = User.new(name: 'rspec-user')
-      @expense = Expense.create!(name: 'React Udemy Course', amount: 12.11, author: @user)
+      @expense = Expense.new(name: 'React Udemy Course', amount: 12.11, author: @user)
     end
 
     it 'should check name data is not valid' do
@@ -12,7 +12,7 @@ RSpec.describe Expense, type: :model do
       expect(@expense).to_not be_valid
     end
 
-    it 'should check icon data is not valid' do
+    it 'should check amount data is not valid' do
       @expense.amount = nil
       expect(@expense).to_not be_valid
     end
