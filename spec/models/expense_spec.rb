@@ -25,6 +25,5 @@ RSpec.describe Expense, type: :model do
     it 'should check name is valid' do
       expect(@expense).to be_valid
     end
-
   end
 end

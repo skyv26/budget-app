@@ -73,4 +73,4 @@ end
 
 gem 'rubocop', '~> 1.42'
 
-gem "rspec-rails", "~> 6.0"
+gem 'rspec-rails', '~> 6.0'
