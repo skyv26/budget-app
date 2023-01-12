@@ -1,2 +1,24 @@
-<h1>Categories#new</h1>
-<p>Find me in app/views/categories/new.html.erb</p>
+<section class="section">
+  <h2 class="section-heading">Add New Category</h2>
+  <%= form_with model: @category do |form| %>
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+    <ul class="icon-container">
+      <li class="icon-list">
+        <%= form.label :name do %>
+          <%= form.radio_button :name, '' %>
+          <%= image_tag "icon/advertise.png" %>
+        <% end %>
+      </li>
+    </ul>
+  <% end %>
+  <!-- <ul class="category-container">
+    <li class="container-list">
+      <figure class="img-container">
+        <img src="https://img.icons8.com/ios-filled/512/maintenance.png" alt="Repair Icon" class="img category-img" />
+      </figure>
+      <p class="category-name">Repair</p>
+      <p class="category-amount">$17.00</p>
+    </li>
+  </ul> -->
+</section>
