@@ -13,3 +13,161 @@
  *= require_tree .
  *= require_self
  */
+
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200;400;500;600;700&display=swap');
+
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  height: 100%;
+}
+
+body {
+  width: 100%;
+  min-height: 100%;
+  position: relative;
+}
+
+.header {
+  height: 5.75rem;
+  width: 100%;
+  background-color: #3778c2;
+  color: white;
+  padding: 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  padding: 1rem;
+}
+
+ul {
+  list-style: none;
+}
+
+.section {
+  width: 100%;
+  text-align: center;
+}
+
+.nav {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+}
+
+.menu {
+  font-size: 1.75rem;
+}
+
+.menu:nth-child(even) {
+  text-transform: uppercase;
+}
+
+.button {
+  border: none;
+  background-color: transparent;
+  color: white;
+  font-size: 2.25rem;
+}
+
+.footer {
+  padding: 0.75rem;
+  background-color: rgb(138, 197, 49);
+  color: white;
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  /* transform: translate(0, 0); */
+}
+
+.btn {
+  display: block;
+  border: thin solid white;
+  width: 100%;
+  text-align: center;
+  padding: 1rem;
+  font-size: 1.75rem;
+  font-family: 'Mulish', sans-serif;
+  text-transform: uppercase;
+}
+
+.img {
+  display: inline-block;
+}
+
+.category-btn {
+ 
+}
+
+.section-heading {
+  width: 100%;
+  font-family: 'Mulish', sans-serif;
+  font-size: 1.75rem;
+  padding: 2rem;
+}
+
+.info-msg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3.25rem;
+  color: #03204152;
+  width: fit-content;
+  height: 70vh;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.category-container {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  width: 100%;
+  height: 70vh;
+  overflow-y: scroll;
+  padding: 1rem 2rem;
+}
+
+.container-list {
+  display: flex;
+  padding: 1rem;
+  grid: 2rem;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 4px 4px 4px rgb(238, 238, 238);
+}
+
+.category-img {
+  width: 4rem;
+  background-color: red;
+}
+
+.category-name {
+  font-size: 1.75rem;
+  width: 100%;
+  font-family: 'Mulish', sans-serif;
+  font-weight: 600;
+  text-align: left;
+  margin-left: 1.25rem;
+}
+
+.category-amount {
+  font-size: 1.7rem;
+  font-family: 'Mulish', sans-serif;
+  font-weight: 700;
+}
+
