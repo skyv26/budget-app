@@ -147,6 +147,7 @@ ul {
   display: flex;
   padding: 1rem;
   grid: 2rem;
+  justify-content: space-between;
   background-color: rgb(255, 255, 255);
   box-shadow: 0 4px 4px 4px rgb(238, 238, 238);
 }
@@ -158,13 +159,28 @@ ul {
   border-radius: 10px;
 }
 
+.category-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 1rem;
+  margin-left: 1.25rem;
+  width: 100%;
+  text-align: left;
+}
+
 .category-name {
   font-size: 1.75rem;
   width: 100%;
   font-family: 'Mulish', sans-serif;
   font-weight: 600;
-  text-align: left;
-  margin-left: 1.25rem;
+}
+
+.category-creation--date {
+  font-size: 1rem;
+  font-family: 'Mulish', sans-serif;
+  font-weight: bold;
+  color: lightslategray;
 }
 
 .category-amount {
@@ -252,3 +268,27 @@ ul {
   color: white;
   cursor: pointer;
 }
+
+.show-category {
+  padding: 1rem 2rem;
+}
+
+.show-category .container-list {
+  border: thin solid darkslategrey;
+  border-bottom: transparent;
+  border-top-left-radius: 1.5rem;
+  border-top-right-radius: 1.5rem;
+}
+
+.total-amount--wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  font-family: 'Mulish', sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+  border: thin solid darkslategrey;
+  border-top: transparent;
+}
+
