@@ -1,2 +1,13 @@
-<h1>Categories#show</h1>
-<p>Find me in app/views/categories/show.html.erb</p>
+<section class="section show-category">
+  <div class="container-list">
+    <%= render 'shared/category-partial', category: @category %>
+  </div>
+  <ul class="transaction-container">
+    <li class="transaction-list">
+    </li>
+  </ul>
+  <div class="total-amount--wrapper">
+    <p class="text">Total Amount</p>
+    <p class="amount">$120.0</p>
+  </div>
+</section>

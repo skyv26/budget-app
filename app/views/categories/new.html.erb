@@ -1,13 +1,13 @@
 <section class="section">
   <h2 class="section-heading">Add New Category</h2>
-  <%= form_with model: @category, url: categories_create_path ,class: 'form-container' do |form| %>
+  <%= form_with model: @category, url: categories_path ,class: 'form-container' do |form| %>
     <%= form.label :name, class: 'form-label' %>
-    <%= form.text_field :name, class: 'form-name' %>
+    <%= form.text_field :name, autofocus: true, class: 'form-name', required: true %>
     <%= form.label :icon, class: 'form-label icon' %>
     <ul class="icon-container">
       <li class="icon-list">
        <label class='icon-label'>
-          <%= form.radio_button :icon, 'icon/advertise.png' %>
+          <%= form.radio_button :icon, 'icon/advertise.png', autofocus: true, required: true %>
           <%= image_tag "icon/advertise.png", class: 'icon-img' %>
         </label>
       </li>
@@ -116,3 +116,6 @@
     </li>
   </ul> -->
 </section>
+<footer class="footer">
+  <%= link_to "back", categories_path, class: 'btn category-btn' %>
+</footer>
