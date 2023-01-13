@@ -1,0 +1,9 @@
+
+<figure class="img-container">
+  <%= image_tag "#{category.icon}", class: 'img category-img', alt: "#{category.name}" %>
+</figure>
+<div class="category-info">
+  <p class="category-name"><%= category.name %></p>
+  <p class="category-creation--date"><%= category.created_at.strftime("%h-%d, %Y [%I : %M : %S %p]") %></p>
+</div>
+<p class="category-amount">$17.00</p>
