@@ -14,7 +14,7 @@
  *= require_self
  */
 
- @import url('https://fonts.googleapis.com/css2?family=Bungee+Inline&family=Mulish:wght@200;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Inline&family=Mulish:wght@200;400;500;600;700&display=swap');
 
 *,
 *::after,
@@ -23,7 +23,7 @@
   padding: 0;
   box-sizing: border-box;
   scrollbar-width: auto;
-  scrollbar-color: #000000 #ffffff;
+  scrollbar-color: #000 #fff;
 }
 
 html {
@@ -44,13 +44,13 @@ body {
 }
 
 *::-webkit-scrollbar-track {
-  background: #ffffff;
+  background: #fff;
 }
 
 *::-webkit-scrollbar-thumb {
-  background-color: #000000;
+  background-color: #000;
   border-radius: 10px;
-  border: 4px solid #ffffff;
+  border: 4px solid #fff;
 }
 
 .header {
@@ -109,6 +109,7 @@ ul {
   bottom: 0;
   left: 0;
   width: 100%;
+
   /* transform: translate(0, 0); */
 }
 
@@ -127,10 +128,6 @@ ul {
   display: inline-block;
 }
 
-.category-btn {
- 
-}
-
 .section-heading {
   width: 100%;
   font-family: 'Mulish', sans-serif;
@@ -144,7 +141,6 @@ ul {
   justify-content: center;
   font-size: 3.25rem;
   color: #03204152;
-  width: fit-content;
   height: 70vh;
   width: 100%;
   border-radius: 5px;
@@ -163,7 +159,7 @@ ul {
 .container-list {
   display: flex;
   padding: 1rem;
-  grid: 2rem;
+  gap: 0.6rem;
   justify-content: space-between;
   background-color: rgb(255, 255, 255);
   box-shadow: 0 4px 4px 4px rgb(238, 238, 238);
@@ -244,6 +240,7 @@ ul {
   flex-wrap: wrap;
   align-items: center;
   justify-content: flex-start;
+
   /* background-color: aquamarine; */
   gap: 2rem;
   margin-top: 1rem;
@@ -417,6 +414,6 @@ ul {
   text-align: center;
   border-radius: 2rem;
   font-weight: 700;
-  font-size: 1.75rem; 
+  font-size: 1.75rem;
   box-shadow: 0 2px 2px 2px rgba(128, 128, 128, 0.281);
 }
