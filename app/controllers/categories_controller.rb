@@ -1,7 +1,7 @@
 class CategoriesController < ApplicationController
   def index
     Bullet.enable = false
-    @categories = Category.includes(:expense_categories).where(author_id: 1).order(created_at: :desc)
+    @categories = Category.includes(:expense_categories).where(author: current_user).order(created_at: :desc)
   end
 
   def show
@@ -17,7 +17,7 @@ class CategoriesController < ApplicationController
 
   def create
     @category = Category.new(category_params)
-    @category.author_id = 1
+    @category.author = current_user
     return unless @category.save
 
     redirect_to categories_path

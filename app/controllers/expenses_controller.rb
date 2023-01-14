@@ -1,12 +1,12 @@
 class ExpensesController < ApplicationController
   def new
     @expense = Expense.new
-    @categories = Category.where(author: 1)
+    @categories = Category.where(author: current_user)
   end
 
   def create
     @expense = Expense.new(expense_params)
-    @expense.author_id = 1
+    @expense.author = current_user
     return unless @expense.save
 
     ExpenseCategory.create!(expense_id: @expense.id, category_id: params[:category])

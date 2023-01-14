@@ -3,7 +3,11 @@ require 'rails_helper'
 RSpec.describe 'expenses#new', type: :system do
   describe 'index page' do
     before(:each) do
-      @aakash = User.create!(name: 'Aakash')
+      @aakash = User.create!(name: 'Aakash', email: 'aakash@gmail.com', password: 'topsecret', password_confirmation: 'topsecret')
+      visit '/'
+      fill_in 'user_email', with: 'aakash@gmail.com'
+      fill_in 'user_password', with: 'topsecret'
+      click_on 'Log in'
       @grocery = Category.create!(name: 'Grocery', icon: 'icon/education.png', author: @aakash)
       visit new_category_expense_path(@grocery.id)
       fill_in 'expense_name', with: 'Repair'
