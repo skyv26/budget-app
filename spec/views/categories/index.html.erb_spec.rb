@@ -12,16 +12,16 @@ RSpec.describe 'categories#index', type: :system do
     end
 
     scenario 'can see the category screen with heading "All Categories"' do
-      expect(page).to have_content("All Categories")
+      expect(page).to have_content('All Categories')
     end
 
     scenario 'can see the navigation with "CATEGORY" text' do
-      expect(page).to have_content("CATEGORY")
+      expect(page).to have_content('CATEGORY')
     end
 
     scenario 'can see the navigation with "Add Category" button link' do
       first('.footer > a').click
-      expect(page).to have_content("Add New Category")
+      expect(page).to have_content('Add New Category')
     end
   end
 end

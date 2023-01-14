@@ -12,11 +12,11 @@ RSpec.describe 'categories#show', type: :system do
     end
 
     scenario 'can see the category name "Grocery"' do
-      expect(page).to have_content("Grocery")
+      expect(page).to have_content('Grocery')
     end
 
     scenario 'can see the expense name "Pizza Materials"' do
-      expect(page).to have_content("Pizza Materials")
+      expect(page).to have_content('Pizza Materials')
     end
 
     scenario 'can see the expense amount "$7.8"' do
@@ -25,7 +25,7 @@ RSpec.describe 'categories#show', type: :system do
 
     scenario 'can see the navigation with "Add Category" button link' do
       first('.footer > a').click
-      expect(page).to have_content("Add New Expense")
+      expect(page).to have_content('Add New Expense')
     end
   end
 end

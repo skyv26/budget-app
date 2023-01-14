@@ -11,16 +11,15 @@ RSpec.describe 'expenses#new', type: :system do
     end
 
     scenario 'can see the form label : NAME' do
-      expect(page).to have_content("NAME")
+      expect(page).to have_content('NAME')
     end
 
     scenario 'can see the form label: AMOUNT' do
-      expect(page).to have_content("Add New Expense")
+      expect(page).to have_content('Add New Expense')
     end
 
     scenario 'can see the navigate title' do
-      expect(page).to have_content("TRANSACTION")
+      expect(page).to have_content('TRANSACTION')
     end
-
   end
 end

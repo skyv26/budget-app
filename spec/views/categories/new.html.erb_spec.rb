@@ -6,9 +6,9 @@ RSpec.describe 'categories#new', type: :system do
       visit new_category_path
       fill_in 'category_name', with: 'Repair'
     end
-    
+
     scenario 'can see the navigation with "Add Category" button link' do
-      expect(page).to have_content("Add New Category")
+      expect(page).to have_content('Add New Category')
     end
 
     scenario 'can see the category name as "Repair" text' do

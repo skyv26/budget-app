@@ -7,15 +7,15 @@ RSpec.describe 'splashs/index.html.erb', type: :system do
     end
 
     scenario 'can see the splash screen with logo' do
-      expect(page).to have_content("Hisaab")
+      expect(page).to have_content('Hisaab')
     end
 
     scenario 'can see the splash screen with "log in" button' do
-      expect(page).to have_content("Log In")
+      expect(page).to have_content('Log In')
     end
 
     scenario 'can see the splash screen with "Sign Up" button' do
-      expect(page).to have_content("Sign Up")
+      expect(page).to have_content('Sign Up')
     end
   end
 end
