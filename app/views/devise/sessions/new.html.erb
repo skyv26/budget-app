@@ -1,0 +1,22 @@
+<div class="splash-container">
+  <p class="logo">Hisaab <br />Kitaab</p>
+  <div class="action-container">
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name), class: 'form-container sign-form') do |f| %>
+    <div class="input_wrapper">
+      <%= f.label :email, class: 'form-label' %><br />
+      <%= f.email_field :email, class: 'form-name', autofocus: true, autocomplete: "email" %>
+    </div>
+
+    <div class="input_wrapper">
+      <%= f.label :password, class: 'form-label' %><br />
+      <%= f.password_field :password, class: 'form-name', autocomplete: "current-password" %>
+    </div>
+
+    <%= f.submit "Log in", class: 'splash-btn login-btn' %>
+  
+  <% end %>
+
+  <%= render "devise/shared/links" %>
+  </div>
+</div>
+

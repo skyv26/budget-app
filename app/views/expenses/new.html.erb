@@ -1,0 +1,21 @@
+<section class="section">
+  <h2 class="section-heading">Add New Expense</h2>
+  <%= form_with model: @expense, url: category_expenses_path ,class: 'form-container expense-form' do |form| %>
+    <div class="input_wrapper">
+      <%= form.label :name, class: 'form-label' %>
+      <%= form.text_field :name, autofocus: true, class: 'form-name', required: true %>
+    </div>
+    <div class="input_wrapper">
+      <%= form.label :amount, class: 'form-label' %>
+      <%= form.number_field :amount, autofocus: true, step: '0.01', class: 'form-name', required: true %>
+    </div>
+    <div class="input_wrapper">
+      <%= form.label :category, class: 'form-label' %>
+      <%= select_tag :category, options_for_select(@categories.map { |category| [category.name, category.id] }), 
+      {prompt: 'Select Category', required: true, 
+       class: 'select_tag'} %>
+    </div>
+
+    <%= form.submit "Add Expense", class: "form-btn" %>
+  <% end %>
+</section>

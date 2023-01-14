@@ -1,0 +1,424 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Inline&family=Mulish:wght@200;400;500;600;700&display=swap');
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scrollbar-width: auto;
+  scrollbar-color: #000 #fff;
+}
+
+html {
+  font-size: 62.5%;
+  height: 100%;
+}
+
+body {
+  width: 100%;
+  min-height: 100%;
+  position: relative;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 0;
+}
+
+*::-webkit-scrollbar-track {
+  background: #fff;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #000;
+  border-radius: 10px;
+  border: 4px solid #fff;
+}
+
+.header {
+  height: 5.75rem;
+  width: 100%;
+  background-color: #3778c2;
+  color: white;
+  padding: 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  padding: 1rem;
+}
+
+ul {
+  list-style: none;
+}
+
+.section {
+  width: 100%;
+  text-align: center;
+}
+
+.nav {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+}
+
+.menu {
+  font-size: 1.75rem;
+}
+
+.menu:nth-child(even) {
+  text-transform: uppercase;
+}
+
+.button {
+  border: none;
+  background-color: transparent;
+  color: white;
+  font-size: 2.25rem;
+}
+
+.footer {
+  padding: 0.75rem;
+  background-color: rgb(138, 197, 49);
+  color: white;
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+
+  /* transform: translate(0, 0); */
+}
+
+.btn {
+  display: block;
+  border: thin solid white;
+  width: 100%;
+  text-align: center;
+  padding: 1rem;
+  font-size: 1.75rem;
+  font-family: 'Mulish', sans-serif;
+  text-transform: uppercase;
+}
+
+.img {
+  display: inline-block;
+}
+
+.section-heading {
+  width: 100%;
+  font-family: 'Mulish', sans-serif;
+  font-size: 1.75rem;
+  padding: 2rem;
+}
+
+.info-msg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3.25rem;
+  color: #03204152;
+  height: 70vh;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.category-container {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  width: 100%;
+  height: 70vh;
+  overflow-y: scroll;
+  padding: 1rem 2rem;
+}
+
+.container-list {
+  display: flex;
+  padding: 1rem;
+  gap: 0.6rem;
+  justify-content: space-between;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 4px 4px 4px rgb(238, 238, 238);
+}
+
+.category-img {
+  width: 6rem;
+  padding: 0.6rem;
+  background-color: rgb(244, 244, 244);
+  border-radius: 10px;
+}
+
+.category-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 1rem;
+  margin-left: 1.25rem;
+  width: 100%;
+  text-align: left;
+}
+
+.category-name {
+  font-size: 1.75rem;
+  width: 100%;
+  font-family: 'Mulish', sans-serif;
+  font-weight: 600;
+}
+
+.category-creation--date {
+  font-size: 1rem;
+  font-family: 'Mulish', sans-serif;
+  font-weight: bold;
+  color: lightslategray;
+}
+
+.category-amount {
+  font-size: 1.7rem;
+  font-family: 'Mulish', sans-serif;
+  font-weight: 700;
+}
+
+.icon-list {
+  position: relative;
+  width: 4rem;
+  height: 4rem;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: left;
+  padding: 1rem 2rem;
+}
+
+.form-name {
+  height: 4rem;
+  padding: 1rem;
+  font-size: 1.75rem;
+}
+
+.form-label {
+  font-size: 1.75rem;
+  margin-bottom: 0.6rem;
+  text-transform: uppercase;
+  font-family: 'Mulish', sans-serif;
+  font-weight: 600;
+}
+
+.form-label.icon {
+  margin-top: 2rem;
+}
+
+.icon-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+
+  /* background-color: aquamarine; */
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+[type=radio] {
+  position: absolute;
+  cursor: pointer;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.icon-img {
+  position: absolute;
+  width: 100%;
+}
+
+/* IMAGE STYLES */
+[type=radio] + img {
+  cursor: pointer;
+}
+
+/* CHECKED STYLES */
+[type=radio]:checked + img {
+  outline: 3px solid #9d37c284;
+  border-radius: 5px;
+}
+
+.form-btn {
+  width: max-content;
+  padding: 1rem;
+  border: none;
+  background-color: #9d37c2;
+  font-family: 'Mulish', sans-serif;
+  font-weight: 700;
+  margin-top: 3rem;
+  color: white;
+  cursor: pointer;
+}
+
+.show-category {
+  padding: 1rem 2rem;
+}
+
+.show-category .container-list {
+  border: thin solid darkslategrey;
+  border-bottom: transparent;
+  border-top-left-radius: 1.5rem;
+  border-top-right-radius: 1.5rem;
+}
+
+.total-amount--wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  font-family: 'Mulish', sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+  border: thin solid darkslategrey;
+}
+
+.transaction-container {
+  height: 36rem;
+  overflow-y: scroll;
+  border-left: thin solid darkslategrey;
+  border-right: thin solid darkslategrey;
+}
+
+.transaction-list {
+  display: flex;
+  justify-content: flex-start;
+  padding: 1rem;
+  font-family: 'Mulish', sans-serif;
+  gap: 1rem;
+}
+
+.transaction-list:nth-child(odd) {
+  background-color: rgba(119, 136, 153, 0.25);
+}
+
+.date_and_time-container {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.75);
+  width: max-content;
+  padding: 0.25rem 1.75rem;
+  font-size: 1.15rem;
+  border: 2px solid rgb(74, 1, 83);
+  border-radius: 1rem;
+  color: white;
+  gap: 0.2rem;
+  font-weight: 700;
+}
+
+.date_and_time-container .day {
+  font-size: 2.25rem;
+}
+
+.transaction-info {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  gap: 2.75rem;
+}
+
+.transaction-name {
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.transaction-time {
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.transaction-amt {
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-left: auto;
+}
+
+.expense-form {
+  display: flex;
+  flex-direction: column;
+  gap: 2.25rem;
+}
+
+.input_wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.select_tag {
+  height: 4rem;
+  font-size: 1.6rem;
+}
+
+.splash-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10rem;
+  font-family: 'Mulish', sans-serif;
+  background: rgba(180, 206, 233, 0.348);
+  height: 100vh;
+}
+
+.logo {
+  font-family: 'Bungee Inline', cursive;
+  font-size: 5rem;
+  color: #002f52;
+}
+
+.action-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 1.6rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.splash-btn {
+  border: thin solid gray;
+  width: 70%;
+  text-align: center;
+  border-radius: 2rem;
+  font-weight: 700;
+  font-size: 1.75rem;
+  box-shadow: 0 2px 2px 2px rgba(128, 128, 128, 0.281);
+}
+
+.login-btn {
+  width: 100%;
+  padding: 1rem;
+  margin-top: 2rem;
+}

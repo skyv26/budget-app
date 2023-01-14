@@ -1,0 +1,21 @@
+<section class="section">
+  <h2 class="section-heading">All Categories</h2>
+  <% if @categories.empty? %>
+    <p class="info-msg" ><span>No Category Found <i class="fa-solid fa-face-frown"></i></span></p>
+  <% else %>
+    <ul class="category-container">
+      <% @categories.each do |category| %>
+        <li>
+          <%= link_to category_path(category.id), class:"container-list" do %>
+            <% @total = 0 %>
+            <% category.expense_categories.each { |e| @total += e.expense.amount } %>
+            <%= render 'shared/category-partial', category: category, amt: @total %>
+          <% end %>
+        </li>
+      <% end %>
+    </ul>
+  <% end %>
+</section>
+<footer class="footer">
+  <%= link_to "Add category", new_category_path, class: 'btn category-btn' %>
+</footer>
