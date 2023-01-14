@@ -77,3 +77,5 @@ gem 'rubocop', '~> 1.42'
 
 
 gem "database_cleaner", "~> 2.0"
+
+gem "bullet", "~> 7.0"
