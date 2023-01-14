@@ -1,6 +1,7 @@
 class CategoriesController < ApplicationController
   def index
     @categories = Category.where(author_id: 1)
+
   end
 
   def show
@@ -9,13 +10,14 @@ class CategoriesController < ApplicationController
 
   def new
     @category = Category.new
+    @icons = Dir.entries('app/assets/images/icon').select{ |icon| icon != "." and icon != ".."}
   end
 
   def create
     @category = Category.new(category_params)
     @category.author_id = 1
     if @category.save
-      redirect_to categories_index_path
+      redirect_to categories_path
     end
 
   end

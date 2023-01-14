@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
-  get 'expenses/new'
   
-  resources :categories
+  resources :categories do
+    resources :expenses
+  end
 
   get 'users/index'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html

@@ -318,9 +318,10 @@ ul {
 
 .transaction-list {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   padding: 1rem;
   font-family: 'Mulish', sans-serif;
+  gap: 1rem;
 }
 
 .transaction-list:nth-child(odd) {
@@ -349,7 +350,6 @@ ul {
   display: flex;
   flex-direction: column;
   text-align: left;
-  width: 90%;
   gap: 2.75rem;
 }
 
@@ -366,4 +366,22 @@ ul {
 .transaction-amt {
   font-size: 1.75rem;
   font-weight: 600;
+  margin-left: auto;
+}
+
+.expense-form {
+  display: flex;
+  flex-direction: column;
+  gap: 2.25rem;
+}
+
+.input_wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.select_tag {
+  height: 4rem;
+  font-size: 1.6rem;
 }

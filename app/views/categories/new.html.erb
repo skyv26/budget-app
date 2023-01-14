@@ -5,117 +5,15 @@
     <%= form.text_field :name, autofocus: true, class: 'form-name', required: true %>
     <%= form.label :icon, class: 'form-label icon' %>
     <ul class="icon-container">
-      <li class="icon-list">
-       <label class='icon-label'>
-          <%= form.radio_button :icon, 'icon/advertise.png', autofocus: true, required: true %>
-          <%= image_tag "icon/advertise.png", class: 'icon-img' %>
-        </label>
-      </li>
-
-      <li class="icon-list">
-       <label class='icon-label'>
-          <%= form.radio_button :icon, 'icon/course.png' %>
-          <%= image_tag "icon/course.png", class: 'icon-img' %>
-        </label>
-      </li>
-
-      <li class="icon-list">
-       <label class='icon-label'>
-          <%= form.radio_button :icon, 'icon/education.png' %>
-          <%= image_tag "icon/education.png", class: 'icon-img' %>
-        </label>
-      </li>
-
-      <li class="icon-list">
-       <label class='icon-label'>
-          <%= form.radio_button :icon, 'icon/electricity.png' %>
-          <%= image_tag "icon/electricity.png", class: 'icon-img' %>
-        </label>
-      </li>
-
-      <li class="icon-list">
-       <label class='icon-label'>
-          <%= form.radio_button :icon, 'icon/gift.png' %>
-          <%= image_tag "icon/gift.png", class: 'icon-img' %>
-        </label>
-      </li>
-
-      <li class="icon-list">
-       <label class='icon-label'>
-          <%= form.radio_button :icon, 'icon/insurance.png' %>
-          <%= image_tag "icon/insurance.png", class: 'icon-img' %>
-        </label>
-      </li>
-
-      <li class="icon-list">
-       <label class='icon-label'>
-          <%= form.radio_button :icon, 'icon/license.png' %>
-          <%= image_tag "icon/license.png", class: 'icon-img' %>
-        </label>
-      </li>
-
-      <li class="icon-list">
-       <label class='icon-label'>
-          <%= form.radio_button :icon, 'icon/money.png' %>
-          <%= image_tag "icon/money.png", class: 'icon-img' %>
-        </label>
-      </li>
-
-      <li class="icon-list">
-       <label class='icon-label'>
-          <%= form.radio_button :icon, 'icon/printing.png' %>
-          <%= image_tag "icon/printing.png", class: 'icon-img' %>
-        </label>
-      </li>
-
-      <li class="icon-list">
-       <label class='icon-label'>
-          <%= form.radio_button :icon, 'icon/repair.png' %>
-          <%= image_tag "icon/repair.png", class: 'icon-img' %>
-        </label>
-      </li>
-
-      <li class="icon-list">
-       <label class='icon-label'>
-          <%= form.radio_button :icon, 'icon/shipping.png' %>
-          <%= image_tag "icon/shipping.png", class: 'icon-img' %>
-        </label>
-      </li>
-
-      <li class="icon-list">
-       <label class='icon-label'>
-          <%= form.radio_button :icon, 'icon/software.png' %>
-          <%= image_tag "icon/software.png", class: 'icon-img' %>
-        </label>
-      </li>
-
-      <li class="icon-list">
-        <label class='icon-label'>
-          <%= form.radio_button :icon, 'icon/telephone.png' %>
-          <%= image_tag "icon/telephone.png", class: 'icon-img' %>
-        </label>
-      </li>
-
-      <li class="icon-list">
-        <label class='icon-label'>
-          <%= form.radio_button :icon, 'icon/travel.png' %>
-          <%= image_tag "icon/travel.png", class: 'icon-img' %>
-        </label>
-      </li>
-
+      <% @icons.each do |icon| %>
+        <li class="icon-list">
+          <label class='icon-label'>
+            <%= form.radio_button :icon, "icon/#{icon}", autofocus: true, required: true %>
+            <%= image_tag "icon/#{icon}", class: 'icon-img' %>
+          </label>
+        </li>
+      <% end %>
     </ul>
     <%= form.submit "Add Category", class: "form-btn" %>
   <% end %>
-  <!-- <ul class="category-container">
-    <li class="container-list">
-      <figure class="img-container">
-        <img src="https://img.icons8.com/ios-filled/512/maintenance.png" alt="Repair Icon" class="img category-img" />
-      </figure>
-      <p class="category-name">Repair</p>
-      <p class="category-amount">$17.00</p>
-    </li>
-  </ul> -->
 </section>
-<footer class="footer">
-  <%= link_to "back", categories_path, class: 'btn category-btn' %>
-</footer>
