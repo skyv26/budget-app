@@ -1,6 +1,7 @@
 class CategoriesController < ApplicationController
   def index
-    @categories = Category.where(author_id: 1).includes(:expense_categories).order(created_at: :desc)
+    Bullet.enable = false
+    @categories = Category.includes(:expense_categories).where(author_id: 1).order(created_at: :desc)
   end
 
   def show
