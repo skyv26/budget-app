@@ -5,16 +5,17 @@ class ExpensesController < ApplicationController
   end
 
   def create
-    @expense = Expense.create(expense_paramas)
+    @expense = Expense.new(expense_params)
     @expense.author_id = 1
     if @expense.save
-      redirect_to categories_index_path
+      ExpenseCategory.create!(expense_id: @expense.id, category_id: params[:category])
+      redirect_to category_path(params[:category])
     end
   end
 
   protected
 
-  def expense_paramas
-    params.require(:category).permit(:name, :icon, :category)
+  def expense_params
+    params.require(:expense).permit(:name, :amount, :category)
   end
 end
