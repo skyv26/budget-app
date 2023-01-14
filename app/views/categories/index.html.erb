@@ -7,7 +7,9 @@
       <% @categories.each do |category| %>
         <li>
           <%= link_to category_path(category.id), class:"container-list" do %>
-            <%= render 'shared/category-partial', category: category %>
+            <% @total = 0 %>
+            <% category.expense_categories.each { |e| @total += e.expense.amount } %>
+            <%= render 'shared/category-partial', category: category, amt: @total %>
           <% end %>
         </li>
       <% end %>

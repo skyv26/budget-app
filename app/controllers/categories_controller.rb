@@ -1,11 +1,12 @@
 class CategoriesController < ApplicationController
   def index
-    @categories = Category.where(author_id: 1)
-
+    @categories = Category.where(author_id: 1).includes(:expense_categories).order(created_at: :desc)
   end
 
   def show
-    @category = Category.find(id=params[:id])
+    @category = Category.find(params[:id])
+    @category_expense = ExpenseCategory.includes(:expense).where(category: @category).order(created_at: :desc)
+    @total_amt = @category_expense.reduce(0) { |sum, obj| sum + obj.expense.amount }
   end
 
   def new

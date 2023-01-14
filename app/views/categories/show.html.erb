@@ -1,24 +1,26 @@
 <section class="section show-category">
   <div class="container-list">
-    <%= render 'shared/category-partial', category: @category %>
+    <%= render 'shared/category-partial', category: @category, amt: @total_amt %>
   </div>
   <ul class="transaction-container">
-    <li class="transaction-list">
-      <div class="date_and_time-container">
-        <p class="date month">Jul</p>
-        <p class="date day">31</p>
-        <p class="date year">1995</p>
-      </div>
-      <div class="transaction-info">
-        <p class="transaction-name">Rich Dad Poor Dad</p>
-        <p class="transaction-time"><i class="fa-regular fa-clock"></i> 02:05:45 PM</p>
-      </div>
-      <p class="transaction-amt">$8</p>
-    </li>
+    <% @category_expense.each do |cat_exp| %>
+      <li class="transaction-list">
+        <div class="date_and_time-container">
+          <p class="date month"><%= cat_exp.created_at.strftime("%h") %></p>
+          <p class="date day"><%= cat_exp.created_at.strftime("%d") %></p>
+          <p class="date year"><%= cat_exp.created_at.strftime("%Y") %></p>
+        </div>
+        <div class="transaction-info">
+          <p class="transaction-name"><%= cat_exp.expense.name %></p>
+          <p class="transaction-time"><i class="fa-regular fa-clock"></i> <%= cat_exp.created_at.strftime("%I:%M:%S %p") %></p>
+        </div>
+        <p class="transaction-amt">$<%= cat_exp.expense.amount %></p>
+      </li>
+    <% end %>
   </ul>
   <div class="total-amount--wrapper">
     <p class="text">Total Amount</p>
-    <p class="amount">$120.0</p>
+    <p class="amount">$<%= @total_amt %></p>
   </div>
 </section>
 <footer class="footer">
