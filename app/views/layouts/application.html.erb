@@ -11,25 +11,24 @@
   </head>
 
   <body>
-    <header class="header">
-      <ul class="nav">
-        <li class="menu">
-          <%= link_to "", categories_path, class: 'fa-sharp fa-solid fa-left-long' %>
-        </li>
-        <% if request.original_url.downcase.include? "expenses" %>
-          <li class="menu">Transaction</li>
-        <% elsif request.original_url.downcase.include? "categories" %>
-          <li class="menu">Category</li>
-        <% end %>
-        <li class="menu">
-          <button class="button">
-            <i class="fa-solid fa-power-off"></i>
-          </button>
-        </li>
-        </li>
-      </ul>
-    </header>
-    
+    <% if user_signed_in? %>
+      <header class="header">
+        <ul class="nav">
+          <li class="menu">
+            <%= link_to "", categories_path, class: 'fa-sharp fa-solid fa-left-long' %>
+          </li>
+          <% if request.original_url.downcase.include? "expenses" %>
+            <li class="menu">Transaction</li>
+          <% elsif request.original_url.downcase.include? "categories" %>
+            <li class="menu">Category</li>
+          <% end %>
+          <li class="menu">
+            <%= button_to "", destroy_user_session_path, method: :delete, class: 'fa-solid fa-power-off button' %>
+          </li>
+          </li>
+        </ul>
+      </header>
+    <% end %>
     <%= yield %>
   </body>
 </html>

@@ -8,9 +8,9 @@
 
 puts 'Seeding to database initialized ....'
 
-aakash = User.create!(name: 'Aakash')
-kumar = User.create!(name: 'Kumar')
-verma = User.create!(name: 'Verma')
+aakash = User.create!(name: 'Aakash', email: 'aakash@gmail.com', password: 'topsecret', password_confirmation: 'topsecret')
+kumar = User.create!(name: 'Kumar', email: 'kumar@gmail.com', password: 'topsecret', password_confirmation: 'topsecret')
+verma = User.create!(name: 'Verma', email: 'verma@gmail.com', password: 'topsecret', password_confirmation: 'topsecret')
 puts 'User Created Successfully !'
 
 repair = Category.create!(name: 'Repair', icon: 'https://img.icons8.com/ios-filled/512/maintenance.png', author: aakash)
