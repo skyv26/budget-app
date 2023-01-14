@@ -73,6 +73,9 @@ GEM
     bootsnap (1.15.0)
       msgpack (~> 1.2)
     builder (3.2.4)
+    bullet (7.0.7)
+      activesupport (>= 3.0.0)
+      uniform_notifier (~> 1.11)
     capybara (3.38.0)
       addressable
       matrix
@@ -84,6 +87,12 @@ GEM
       xpath (~> 3.2)
     concurrent-ruby (1.1.10)
     crass (1.0.6)
+    database_cleaner (2.0.1)
+      database_cleaner-active_record (~> 2.0.0)
+    database_cleaner-active_record (2.0.1)
+      activerecord (>= 5.a)
+      database_cleaner-core (~> 2.0.0)
+    database_cleaner-core (2.0.1)
     date (3.3.3)
     debug (1.7.1)
       irb (>= 1.5.0)
@@ -155,6 +164,10 @@ GEM
       activesupport (= 7.0.4)
       bundler (>= 1.15.0)
       railties (= 7.0.4)
+    rails-controller-testing (1.0.5)
+      actionpack (>= 5.0.1.rc1)
+      actionview (>= 5.0.1.rc1)
+      activesupport (>= 5.0.1.rc1)
     rails-dom-testing (2.0.3)
       activesupport (>= 4.2.0)
       nokogiri (>= 1.6)
@@ -226,6 +239,7 @@ GEM
     tzinfo (2.0.5)
       concurrent-ruby (~> 1.0)
     unicode-display_width (2.4.2)
+    uniform_notifier (1.16.0)
     web-console (4.2.0)
       actionview (>= 6.0.0)
       activemodel (>= 6.0.0)
@@ -248,13 +262,16 @@ PLATFORMS
 
 DEPENDENCIES
   bootsnap
+  bullet (~> 7.0)
   capybara
+  database_cleaner (~> 2.0)
   debug
   importmap-rails
   jbuilder
   pg (~> 1.1)
   puma (~> 5.0)
   rails (~> 7.0.4)
+  rails-controller-testing
   rspec-rails (~> 6.0)
   rubocop (~> 1.42)
   selenium-webdriver
