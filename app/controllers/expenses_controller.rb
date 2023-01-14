@@ -7,10 +7,10 @@ class ExpensesController < ApplicationController
   def create
     @expense = Expense.new(expense_params)
     @expense.author_id = 1
-    if @expense.save
-      ExpenseCategory.create!(expense_id: @expense.id, category_id: params[:category])
-      redirect_to category_path(params[:category])
-    end
+    return unless @expense.save
+
+    ExpenseCategory.create!(expense_id: @expense.id, category_id: params[:category])
+    redirect_to category_path(params[:category])
   end
 
   protected

@@ -11,16 +11,15 @@ class CategoriesController < ApplicationController
 
   def new
     @category = Category.new
-    @icons = Dir.entries('app/assets/images/icon').select{ |icon| icon != "." and icon != ".."}
+    @icons = Dir.entries('app/assets/images/icon').select { |icon| icon != '.' and icon != '..' }
   end
 
   def create
     @category = Category.new(category_params)
     @category.author_id = 1
-    if @category.save
-      redirect_to categories_path
-    end
+    return unless @category.save
 
+    redirect_to categories_path
   end
 
   def category_params
