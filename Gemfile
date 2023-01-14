@@ -73,6 +73,10 @@ group :test do
   gem 'webdrivers'
 end
 
+gem 'rails-controller-testing'
+gem 'rspec-rails', '~> 6.0'
+gem 'selenium-webdriver'
+
 gem 'rubocop', '~> 1.42'
 
 gem 'database_cleaner', '~> 2.0'
