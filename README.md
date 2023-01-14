@@ -56,9 +56,13 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-> Add a link to your deployed project.
+> Link to your deployed project.
 
-- [Comming Soon 🎈]()
+- [Click Here](https://skyv-budget-app.onrender.com/)
+
+> Presentation
+
+- [Loom Video](https://www.loom.com/share/d88f48378df045b68322c5a70ec6df5f)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
