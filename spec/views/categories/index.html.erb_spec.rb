@@ -22,7 +22,6 @@ RSpec.describe 'categories#index', type: :system do
     scenario 'can see the navigation with "Add Category" button link' do
       first('.footer > a').click
       expect(page).to have_content("Add New Category")
-      
     end
   end
 end
