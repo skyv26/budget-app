@@ -23,6 +23,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scrollbar-width: auto;
+  scrollbar-color: #000000 #ffffff;
 }
 
 html {
@@ -34,6 +36,22 @@ body {
   width: 100%;
   min-height: 100%;
   position: relative;
+}
+
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 0;
+}
+
+*::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #000000;
+  border-radius: 10px;
+  border: 4px solid #ffffff;
 }
 
 .header {
@@ -289,6 +307,63 @@ ul {
   font-weight: 700;
   font-size: 2rem;
   border: thin solid darkslategrey;
-  border-top: transparent;
 }
 
+.transaction-container {
+  height: 36rem;
+  overflow-y: scroll;
+  border-left: thin solid darkslategrey;
+  border-right: thin solid darkslategrey;
+}
+
+.transaction-list {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  font-family: 'Mulish', sans-serif;
+}
+
+.transaction-list:nth-child(odd) {
+  background-color: rgba(119, 136, 153, 0.25);
+}
+
+.date_and_time-container {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.75);
+  width: max-content;
+  padding: 0.25rem 1.75rem;
+  font-size: 1.15rem;
+  border: 2px solid rgb(74, 1, 83);
+  border-radius: 1rem;
+  color: white;
+  gap: 0.2rem;
+  font-weight: 700;
+}
+
+.date_and_time-container .day {
+  font-size: 2.25rem;
+}
+
+.transaction-info {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  width: 90%;
+  gap: 2.75rem;
+}
+
+.transaction-name {
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.transaction-time {
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.transaction-amt {
+  font-size: 1.75rem;
+  font-weight: 600;
+}
