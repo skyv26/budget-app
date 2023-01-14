@@ -3,7 +3,9 @@ require 'rails_helper'
 RSpec.describe 'categories#new', type: :system do
   describe 'index page' do
     before(:each) do
-      aakash = User.create!(name: 'Aakash', email: 'aakash@gmail.com', password: 'topsecret', password_confirmation: 'topsecret')
+      @aakash = User.create!(name: 'Aakash', email: 'aakash@gmail.com',
+                             password: 'topsecret',
+                             password_confirmation: 'topsecret')
       visit '/'
       fill_in 'user_email', with: 'aakash@gmail.com'
       fill_in 'user_password', with: 'topsecret'
