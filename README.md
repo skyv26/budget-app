@@ -24,9 +24,9 @@
 
 # 📖 Budget App <a name="about-project"></a>
 
-> The Blog app is a classic blog design website. ln which we can create, show the list of posts and empower readers to interact with them by adding comments and liking posts.
+> A budgeting app is a software application that you may access from your computer, tablet or mobile device to track your finances, such as income, savings, debt payoff, or investing. Budgeting apps often will sync with your financial accounts to give you an overview in real-time when finances change.
 
-**[Blog App]** is a ruby blog website.
+**[Budget App]** is a ruby blog website.
 
 ## 🛠 Built With <a name="built-with"></a>
 
