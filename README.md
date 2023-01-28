@@ -58,7 +58,7 @@
 
 > Link to your deployed project.
 
-- [Click Here](https://skyv-budget-app.onrender.com/)
+- [Budget App Live Link](https://skyv-budget-app.onrender.com/)
 
 > Presentation
 
